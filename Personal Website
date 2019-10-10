@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>
+      Danny's Personal Portfolio
+    </title>
+  </head>
+  <body>
+    <h1> About Me </h1>
+    <h2> Education </h2>
+    <h3> Interests </h3>
+    <p> I am a first year student in the Masters of Health Informatics Program at UofT.
+    <br> I am interested in how we can make healthcare better through technology. 
+    </p>
+  </body>
+</html>
