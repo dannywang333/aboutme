@@ -2,10 +2,139 @@
 
 <html>
   <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-152691205-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-152691205-1');
+</script>
 
     <title>
       Contact Me
     </title>
+
+    <SCRIPT language="JavaScript" type="text/javascript">
+if (Count()==1){
+document.write("This is your 1st visit to our page")
+When()
+}
+else if (Count()>1)
+document.write("Welcome back. Your last visit was on <b>" + When() +"</B>.")
+</script>
+
+<!--Simply copy and paste into HEAD Section of your page.-->
+
+<SCRIPT LANGUAGE = "JavaScript">
+<!-- Begin Script
+
+//Display Time of last visit script
+//Visit http://rainbow.arch.scriptmania.com for this script
+
+var expDays = 30;
+var exp = new Date(); 
+exp.setTime(exp.getTime() + (expDays*24*60*60*1000));
+
+function When(info){
+  // When
+        var rightNow = new Date()
+    var WWHTime = 0;
+    WWHTime = GetCookie('WWhenH')
+    
+    WWHTime = WWHTime * 1
+
+    var lastHereFormatting = new Date(WWHTime);  // Date-i-fy that number
+          var intLastVisit = (lastHereFormatting.getYear() * 10000)+(lastHereFormatting.getMonth() * 100) + lastHereFormatting.getDate()
+          var lastHereInDateFormat = "" + lastHereFormatting;  // Gotta use substring functions
+          var dayOfWeek = lastHereInDateFormat.substring(0,3)
+          var dateMonth = lastHereInDateFormat.substring(4,10)
+    var hours = "" + lastHereFormatting.getHours()
+    var year = lastHereFormatting.getYear()
+                if (year < 1000) year+=1900
+    var minutes = "" + lastHereFormatting.getMinutes()
+    if (minutes.substring(0,1) == minutes){
+      minutes = "0" + minutes
+    }
+          var WWHText = dayOfWeek + ", " + dateMonth + " " + year + " at " +  hours + ":" + minutes// display
+  
+    SetCookie ("WWhenH", rightNow.getTime(), exp)
+
+  return WWHText;
+}
+
+function Count(info){
+  var psj=0;
+  // How many times
+    var WWHCount = GetCookie('WWHCount')
+    if (WWHCount == null) {
+      WWHCount = 0;
+    }
+    else{
+      WWHCount++;
+    }
+    SetCookie ('WWHCount', WWHCount, exp);
+
+
+  return WWHCount+1;
+}
+
+
+
+function set(){
+//  VisitorName = prompt("Who are you?", "Nada");
+//  SetCookie ('VisitorName', VisitorName, exp);
+  SetCookie ('WWHCount', 0, exp);
+  SetCookie ('WWhenH', 0, exp);
+}
+
+function getCookieVal (offset) {  
+  var endstr = document.cookie.indexOf (";", offset);  
+  if (endstr == -1)    
+    endstr = document.cookie.length;  
+    return unescape(document.cookie.substring(offset, endstr));
+}
+
+function GetCookie (name) {  
+  var arg = name + "=";  
+  var alen = arg.length;  
+  var clen = document.cookie.length;  
+  var i = 0;  
+  while (i < clen) {    
+  var j = i + alen;    
+  if (document.cookie.substring(i, j) == arg)      
+    return getCookieVal (j);    
+    i = document.cookie.indexOf(" ", i) + 1;    
+    if (i == 0) break;   
+  }  
+  return null;
+}
+
+function SetCookie (name, value) {  
+  var argv = SetCookie.arguments;  
+  var argc = SetCookie.arguments.length;  
+  var expires = (argc > 2) ? argv[2] : null;  
+  var path = (argc > 3) ? argv[3] : null;  
+  var domain = (argc > 4) ? argv[4] : null;  
+  var secure = (argc > 5) ? argv[5] : false;  
+  document.cookie = name + "=" + escape (value) + 
+  ((expires == null) ? "" : ("; expires=" + expires.toGMTString())) + 
+  ((path == null) ? "" : ("; path=" + path)) +  
+  ((domain == null) ? "" : ("; domain=" + domain)) +    
+  ((secure == true) ? "; secure" : "");
+}
+
+function DeleteCookie (name) {  
+  var exp = new Date();  
+  exp.setTime (exp.getTime() - 1);  
+  // This cookie is history  
+  var cval = GetCookie (name);  
+  document.cookie = name + "=" + cval + "; expires=" + exp.toGMTString();
+
+}
+//  End Script -->
+</SCRIPT>
 
      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 </head>
@@ -44,6 +173,11 @@
 </nav>
 
 
-    <a href="https://www.linkedin.com/in/danny-wang-231875121/"> Here is a link to my LinkedIn Profile </a>
+    <a href="https://www.linkedin.com/in/danny-wang-231875121/"> Access my LinkedIn Profile here </a>
+
+    <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+
+    <div class="LI-profile-badge"  data-version="v1" data-size="medium" data-locale="en_US" data-type="vertical" data-theme="light" data-vanity="danny-wang-231875121"><a class="LI-simple-link" href='https://ca.linkedin.com/in/danny-wang-231875121?trk=profile-badge'>Danny Wang</a></div>
+
 
   </html>
